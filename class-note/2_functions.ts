@@ -11,10 +11,10 @@ function add(): number {
 }
 
 // 함수에 타입을 정의하는 방식
-function sum(a: number, b: number): number {
-    return a + b;
-}
-sum(10);
+// function sum(a: number, b: number): number {
+//     return a + b;
+// }
+// sum(10);
 
 // 함수의 선택적 파라미터(옵셔널 파라미터) - 물음표
 function log(a: string, b?: string) {
