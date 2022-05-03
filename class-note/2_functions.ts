@@ -14,4 +14,12 @@ function add(): number {
 function sum(a: number, b: number): number {
     return a + b;
 }
+sum(10);
 
+// 함수의 선택적 파라미터(옵셔널 파라미터) - 물음표
+function log(a: string, b?: string) {
+
+}
+
+log('hello world');
+log('hello ts', 'abc');
