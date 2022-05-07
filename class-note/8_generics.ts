@@ -84,8 +84,7 @@ function logTextLength < T extends LengthType > (text: T): T {
     text.length;
     return text;
 }
-// logTextLength(10);
-logTextLength(10); // X 숫자는 length가 내부속성으로 지원되지 않기 때문
+// logTextLength(10); // X 숫자는 length가 내부속성으로 지원되지 않음.
 logTextLength({
     length: 10
 }); // O
