@@ -10,8 +10,8 @@
     - [ ] 타입스크립트 라이브러리 설치
     - [ ] 타입스크립트 설정 파일 생성 및 기본 값 추가
 
-    <!-- package.json 생성 npm init -y -->
-    <!-- typescript 생성 npm i typescript --
+    * 1. package.json 생성 npm init -y
+    * 2. typescript 생성 npm i typescript
 
 ## 참고 자료
 
