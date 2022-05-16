@@ -12,13 +12,15 @@
     - [X] 자바스크립트 파일을 타입스크립트 파일로 변환
     - [X] `tsc` 명령어로 타입스크립트 컴파일 하기
      <br>
+    * 1. package.json 생성 : npm init -y<br>
+    * 2. typescript 생성 : npm i typescript<br>
+    * 3. 자동완성 단축키 : Ctrl + space<br>
+    <br>
 2. 명시적인 `any`선언하기
     - `tsconfig.json`파일에 `noImplicitAny`값을 `true`로 추가
 
-    <br>
-    * 1. package.json 생성 : npm init -y<br>
-    * 2. typescript 생성 : npm i typescript<br>
-    * 3. 자동완성 단축키 : Ctrl + space
+    
+    
 
 ## 참고 자료
 
