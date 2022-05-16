@@ -11,6 +11,10 @@
     - [X] 타입스크립트 설정 파일 생성 및 기본 값 추가
     - [X] 자바스크립트 파일을 타입스크립트 파일로 변환
     - [X] `tsc` 명령어로 타입스크립트 컴파일 하기
+
+2. 명시적인 `any`선언하기
+    - `tsconfig.json`파일에 `noImplicitAny`값을 `true`로 추가
+
     <br>
     * 1. package.json 생성 : npm init -y<br>
     * 2. typescript 생성 : npm i typescript<br>
