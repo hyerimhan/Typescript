@@ -54,8 +54,14 @@ fetchCovidSummary().then((res: any) => {
   console.log(res.Country)
 })
 
-function fetchCountryInfo(countryCode: any, status: any) {
-  // params: confirmed, recovered, deaths
+enum CovidStatus {
+  Comfirmed = 'confirmed',
+  Recovered = 'recovered',
+  Deaths = 'deaths'
+}
+
+function fetchCountryInfo(countryCode: string, status: CovidStatus) {
+  // status params: confirmed, recovered, deaths
   const url = `https://api.covid19api.com/country/${countryCode}/status/${status}`;
   return axios.get(url);
 }
