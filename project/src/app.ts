@@ -7,12 +7,12 @@ function getUnixTimestamp(date: Date) {
 }
 
 // DOM
-// Element(최고 상위), HTMLElement(Element상속), HTMLParagraphElement(HTMLElement 더 구체적으로 확장)
+// Element(최고 상위), HTMLElement(Element상속), HTMLParagraphElement(HTMLElement 더 구체적으로 상속)
 var a: Element | HTMLElement | HTMLParagraphElement
-const confirmedTotal = $('.confirmed-total');
-const deathsTotal: HTMLParagraphElement = $('.deaths');
-const recoveredTotal = $('.recovered');
-const lastUpdatedTime = $('.last-updated-time');
+const confirmedTotal = $('.confirmed-total') as HTMLSpanElement;
+const deathsTotal = $('.deaths') as HTMLParagraphElement; // HTML p태그에 .deaths
+const recoveredTotal = $('.recovered') as HTMLParagraphElement;
+const lastUpdatedTime = $('.last-updated-time') as HTMLParagraphElement;
 const rankList = $('.rank-list');
 const deathsList = $('.deaths-list');
 const recoveredList = $('.recovered-list');
