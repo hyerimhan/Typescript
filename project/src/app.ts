@@ -5,7 +5,7 @@
 // import {} from '파일 상대 결로';
 
 import axios from 'axios';
-import Chart from 'chart.js';
+import * as Chart from 'chart.js';
 
 // utils
 function $(selector: string) {
