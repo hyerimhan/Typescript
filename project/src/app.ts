@@ -64,10 +64,7 @@ function fetchCovidSummary(): Promise<AxiosResponse<CovidSummaryResponse>> {
   return axios.get(url);
 }
 
-fetchCovidSummary().then(res => res.data.);
-fetchCovidSummary().then((res: any) => {
-  console.log(res.Country);
-});
+// fetchCovidSummary().then(res => res.data.);
 
 enum CovidStatus {
   Comfirmed = 'confirmed',
