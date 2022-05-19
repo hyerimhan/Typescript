@@ -4,7 +4,7 @@
 // // 변수, 함수 임포트 문법
 // import {} from '파일 상대 결로';
 
-import axios from 'axios';
+import axios, { AxiosResponse } from 'axios';
 import { Chart } from 'chart.js';
 
 // utils
@@ -52,14 +52,34 @@ const isRecoveredLoading = false;
  * @property{Array<object>} Country
  */
 
+interface CovidSummaryResponse {
+  Countries: any[];
+  Date: string;
+  Global: any;
+  message: string;
+  // Date: "2022-05-19T15:14:41.97Z"
+  // Global: {NewConfirmed: 431708, TotalConfirmed: 521830110, NewDeaths: 1701, TotalDeaths: 6266563,…}
+  // Date: "2022-05-19T15:14:41.97Z"
+  // NewConfirmed: 431708
+  // NewDeaths: 1701
+  // NewRecovered: 0
+  // TotalConfirmed: 521830110
+  // TotalDeaths: 6266563
+  // TotalRecovered: 0
+  // ID: "fa3dd295-d260-4e5c-9e73-b8762b524014"
+  // Message: ""
+}
+
 // api
 /**
  * @returns {Promise<CovidSummary>}
  */
-function fetchCovidSummary() {
+function fetchCovidSummary(): Promise<AxiosResponse<CovidSummaryResponse>> {
   const url = 'https://api.covid19api.com/summary';
   return axios.get(url);
 }
+
+fetchCovidSummary().then(res => res.data);
 fetchCovidSummary().then((res: any) => {
   console.log(res.Country);
 });
