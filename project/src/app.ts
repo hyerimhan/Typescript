@@ -64,8 +64,6 @@ function fetchCovidSummary(): Promise<AxiosResponse<CovidSummaryResponse>> {
   return axios.get(url);
 }
 
-// fetchCovidSummary().then(res => res.data.);
-
 enum CovidStatus {
   Comfirmed = 'confirmed',
   Recovered = 'recovered',
@@ -233,7 +231,7 @@ function setChartData(data: any) {
   renderChart(chartData, chartLabel);
 }
 
-function setTotalConfirmedNumber(data: any) {
+function setTotalConfirmedNumber(data: CovidSummaryResponse) {
   confirmedTotal.innerText = data.Countries.reduce(
     (total: any, current: any) => (total += current.TotalConfirmed),
     0
