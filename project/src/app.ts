@@ -5,7 +5,7 @@
 // import {} from '파일 상대 결로';
 
 import axios, { AxiosResponse } from 'axios';
-import { Chart } from 'chart.js';
+import * as Chart from 'chart.js';
 
 // 타입 모듈
 import {
@@ -134,7 +134,7 @@ async function handleListClick(event: MouseEvent) {
   isDeathLoading = false;
 }
 
-function setDeathsList(data: CovidSummaryResponse) {
+function setDeathsList(data: CountrySummaryResponse) {
   const sorted = data.sort(
     (a: CountrySummaryInfo, b: CountrySummaryInfo) =>
       getUnixTimestamp(b.Date) - getUnixTimestamp(a.Date)
@@ -157,16 +157,16 @@ function clearDeathList() {
   deathsList.innerHTML = null;
 }
 
-function setTotalDeathsByCountry(data: CovidSummaryResponse) {
+function setTotalDeathsByCountry(data: CountrySummaryResponse) {
   deathsTotal.innerText = data[0].Cases.toString();
 }
 
-function setRecoveredList(data: CovidSummaryResponse) {
+function setRecoveredList(data: CountrySummaryResponse) {
   const sorted = data.sort(
     (a: CountrySummaryInfo, b: CountrySummaryInfo) =>
       getUnixTimestamp(b.Date) - getUnixTimestamp(a.Date)
   );
-  sorted.forEach((value: any) => {
+  sorted.forEach((value: CountrySummaryInfo) => {
     const li = document.createElement('li');
     li.setAttribute('class', 'list-item-b flex align-center');
     const span = document.createElement('span');
@@ -184,7 +184,7 @@ function clearRecoveredList() {
   recoveredList.innerHTML = null;
 }
 
-function setTotalRecoveredByCountry(data: CovidSummaryResponse) {
+function setTotalRecoveredByCountry(data: CountrySummaryResponse) {
   recoveredTotal.innerText = data[0].Cases.toString();
 }
 
