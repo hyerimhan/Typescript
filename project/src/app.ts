@@ -80,7 +80,7 @@ function fetchCountryInfo(
   status: CovidStatus
 ): Promise<AxiosResponse<CountrySummaryResponse>> {
   // status params: confirmed, recovered, deaths
-  const url = `https://api.covid19api.com/country/${countryCode}/status/${status}`;
+  const url = `https://api.covid19api.com/country/${countryName}/status/${status}`;
   return axios.get(url);
 }
 
