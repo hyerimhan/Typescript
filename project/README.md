@@ -15,6 +15,7 @@
     * 1. package.json 생성 : npm init -y<br>
     * 2. typescript 생성 : npm i typescript<br>
     * 3. 자동완성 단축키 : Ctrl + space<br>
+    * [참고] 프로젝트 초기화(기본 세팅) : yarn init, npx tsc --init<br>
     <br>
 2. 명시적인 `any`선언하기
     - `tsconfig.json`파일에 `noImplicitAny`값을 `true`로 추가
