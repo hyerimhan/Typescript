@@ -3,10 +3,11 @@
         "allowJs": true,
         "noImplicitThis": true,
         "target": "ES5",
-        "outDir": "./built/",
+        "outDir": "./dist",
         "moduleResolution": "node",
         "lib": ["ES2015","DOM","DOM.Iterable"],
         "noImplicitAny": true,
+        "esModuleInterop": true,
         "typeRoots": ["./node_modules/@types", "./types"]
     },
     "include": ["./src/**/*"]
