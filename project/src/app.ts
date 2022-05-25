@@ -5,7 +5,7 @@
 // import {} from '파일 상대 결로';
 
 import axios, { AxiosResponse } from 'axios';
-import { Chart } from 'chart.js';
+import Chart from 'chart.js';
 
 // 타입 모듈
 import {
@@ -91,10 +91,13 @@ function startApp() {
 
 // events
 function initEvents() {
+  if (!rankList) {
+    return;
+  }
   rankList.addEventListener('click', handleListClick);
 }
 
-async function handleListClick(event: MouseEvent) {
+async function handleListClick(event: Event) {
   let selectedId;
   if (
     event.target instanceof HTMLParagraphElement ||
